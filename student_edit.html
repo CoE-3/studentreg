@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+ <h1>Edit Student</h1>
+		<form action="/student/edit/{{student.key.id()}}" method="post">
+		<div> <input type="text" name="first_edit" placeholder ="First Name" value="{{student.first_name}}"></text><br></br></div>
+		<div> <input type="text" name="last_edit" placeholder ="Last Name" value="{{student.last_name}}"></text><br></br></div>
+		<div> <input type="text" name="age_edit" placeholder ="Age" value="{{student.age}}"></text><br></br></div>
+		<div> <input type="text" name="gender_edit" placeholder ="Gender" value="{{student.gender}}"></text></div>
+		<hr>
+		<div> <input type="submit" value="Edit"></text></div>
+</body>
+</html>

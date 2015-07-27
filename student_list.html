@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+ <h2>STUDENT LIST</h2>
+ <hr>
+    <ul>
+    {% for student in student_list %}
+        <li>{{student.first_name}} {{student.last_name}} <a href='/student/{{student.key.id()}}'>View Details</a>
+    {% endfor %}
+    </ul>
+    <a href = '/'>Go Back to Main Page</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile</title>
+</head>
+<body>
+	<h1>STUDENT DETAILS</h1>
+	<table>
+		<tr>
+			<td>FIRST NAME</td>
+			<td>LAST NAME</td>
+			<td>AGE</td>
+			<td>GENDER</td>
+		</tr>
+    {% for profile in student_details %}
+    	{%if id == profile.key.id()%}
+
+    	<tr>
+    		<td>{{profile.first_name}}</td>
+    		<td>{{profile.last_name}}</td>
+    		<td>{{profile.age}}</td>
+    		<td>{{profile.gender}}</td>
+    		<td><a href='/student/edit/{{profile.key.id()}}'>Edit</a></td>
+    		<td><a href='/student/delete/{{profile.key.id()}}'>Delete</a></td>
+    	</tr>
+        {% endif %}
+    {% endfor %}
+	</table>
+	<br><br><align='center'><a href='/student/list'>Back to Student List</a><td>
+</body>
+</html>
